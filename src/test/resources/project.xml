@@ -1,0 +1,39 @@
+<project id="xproject">
+
+  <parent id="base-project"/>
+
+  <environments>
+
+    <environment id="prod">
+      <chunks>
+
+        <chunk id="chunk1">
+          <servers>
+            <server id="s1">
+              <host
+                name="s1.int.soebes.com"
+                port="1299" />
+            </server>
+
+            <server id="s2">
+              <host
+                name="s2.int.soebes.com"
+                port="1011" />
+            </server>
+          </servers>
+        </chunk>
+      </chunks>
+    </environment>
+
+    <environment id="det-1">
+
+    </environment>
+
+    <environment id="det-2">
+
+    </environment>
+
+    <environment id="iut">
+    </environment>
+  </environments>
+</project>
