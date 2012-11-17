@@ -63,18 +63,12 @@
           <execution>
             <id>generate-schemata-code</id>
             <goals>
-              <goal>xjc</goal>
+              <goal>schemagen</goal>
             </goals>
-            <phase>generate-sources</phase>
             <configuration>
-              <!--
-                Derzeit scheint es nicht möglich zu sein dass default Verezichnis src/main/xsd zu verwenden.
-                Dabei kommt es dann zu fehlern.
-                TODO: Nochmal überprüfen, ob das ein Problem des Plugins ist oder ein Problem des xjb binding Files.
-              -->
-              <schemaDirectory>${basedir}/src/main/resources</schemaDirectory>
-              <bindingDirectory>${basedir}/src/main/xjb</bindingDirectory>
-              <arguments>-enableIntrospection</arguments>
+              <includes>
+                <include>com/soebes/configurator/*.java</include>
+              </includes>
             </configuration>
           </execution>
         </executions>
