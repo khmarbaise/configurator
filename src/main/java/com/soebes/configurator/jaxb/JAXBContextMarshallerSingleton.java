@@ -6,7 +6,7 @@ import javax.xml.bind.Marshaller;
 
 import org.apache.log4j.Logger;
 
-import com.soebes.configurator.Project;
+import com.soebes.configurator.General;
 
 public final class JAXBContextMarshallerSingleton {
 
@@ -16,7 +16,7 @@ public final class JAXBContextMarshallerSingleton {
     }
 
     private static Marshaller createMarshaller() throws JAXBException {
-	JAXBContext jc = JAXBContext.newInstance(Project.class);
+	JAXBContext jc = JAXBContext.newInstance(General.class);
 	Marshaller m = jc.createMarshaller();
 
 	m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");

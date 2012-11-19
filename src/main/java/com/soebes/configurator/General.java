@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Project {
+public class General {
 
     @XmlAttribute
     private String id;
@@ -21,11 +21,11 @@ public class Project {
     @XmlElement(name="environment")    
     private List<Environment> environments;
     
-    public Project() {
+    public General() {
 	this.environments = new ArrayList<Environment>();
     }
 
-    public Project(String id) {
+    public General(String id) {
 	this();
 	this.id = id;
     }

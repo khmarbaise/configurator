@@ -11,7 +11,7 @@ public class FirstTest {
 
     @Test
     public void firstXmlTest() throws JAXBException {
-	Project global = new Project("xproject");
+	General global = new General("xproject");
 	Environment environment_prod = new Environment("prod");
 	
 	Chunk chunk1 = new Chunk();
