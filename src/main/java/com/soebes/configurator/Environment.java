@@ -12,39 +12,40 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Environment {
 
-    @XmlAttribute
-    private String id;
-    
-    @XmlElementWrapper(name="chunks")
-    @XmlElement(name="chunk")    
-    private List<Chunk> chunks;
+	@XmlAttribute
+	private String id;
 
-    public Environment() {
-	this.chunks = new ArrayList<Chunk>();
-    }
-    public Environment(String id) {
-	this();
-	this.id = id;
-    }
-    
-    public void addChunk(Chunk chunk) {
-	this.chunks.add(chunk);
-    }
+	@XmlElementWrapper(name = "chunks")
+	@XmlElement(name = "chunk")
+	private List<Chunk> chunks;
 
-    public String getId() {
-        return id;
-    }
+	public Environment() {
+		this.chunks = new ArrayList<Chunk>();
+	}
 
-    public void setId(String id) {
-        this.id = id;
-    }
+	public Environment(String id) {
+		this();
+		this.id = id;
+	}
 
-    public List<Chunk> getChunks() {
-        return chunks;
-    }
+	public void addChunk(Chunk chunk) {
+		this.chunks.add(chunk);
+	}
 
-    public void setChunks(List<Chunk> chunks) {
-        this.chunks = chunks;
-    }
-    
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public List<Chunk> getChunks() {
+		return chunks;
+	}
+
+	public void setChunks(List<Chunk> chunks) {
+		this.chunks = chunks;
+	}
+
 }

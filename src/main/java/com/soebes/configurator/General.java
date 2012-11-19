@@ -14,40 +14,40 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class General {
 
-    @XmlAttribute
-    private String id;
+	@XmlAttribute
+	private String id;
 
-    @XmlElementWrapper(name="environments")
-    @XmlElement(name="environment")    
-    private List<Environment> environments;
-    
-    public General() {
-	this.environments = new ArrayList<Environment>();
-    }
+	@XmlElementWrapper(name = "environments")
+	@XmlElement(name = "environment")
+	private List<Environment> environments;
 
-    public General(String id) {
-	this();
-	this.id = id;
-    }
+	public General() {
+		this.environments = new ArrayList<Environment>();
+	}
 
-    public void addEnvironment(Environment environment) {
-	this.environments.add(environment);
-    }
-    
-    public String getId() {
-        return id;
-    }
+	public General(String id) {
+		this();
+		this.id = id;
+	}
 
-    public void setId(String id) {
-        this.id = id;
-    }
+	public void addEnvironment(Environment environment) {
+		this.environments.add(environment);
+	}
 
-    public List<Environment> getEnvironments() {
-        return environments;
-    }
+	public String getId() {
+		return id;
+	}
 
-    public void setEnvironments(List<Environment> environments) {
-        this.environments = environments;
-    }
-    
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public List<Environment> getEnvironments() {
+		return environments;
+	}
+
+	public void setEnvironments(List<Environment> environments) {
+		this.environments = environments;
+	}
+
 }

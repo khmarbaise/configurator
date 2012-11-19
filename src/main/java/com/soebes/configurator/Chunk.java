@@ -12,31 +12,31 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Chunk {
 
-    @XmlAttribute
-    private String id;
+	@XmlAttribute
+	private String id;
 
-    @XmlElementWrapper(name="servers")
-    @XmlElement(name="server")    
-    private List<Server> servers;
+	@XmlElementWrapper(name = "servers")
+	@XmlElement(name = "server")
+	private List<Server> servers;
 
-    public Chunk() {
-	this.servers = new ArrayList<Server>();
-    }
+	public Chunk() {
+		this.servers = new ArrayList<Server>();
+	}
 
-    public String getId() {
-	return id;
-    }
+	public String getId() {
+		return id;
+	}
 
-    public void setId(String id) {
-	this.id = id;
-    }
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    public List<Server> getServers() {
-	return servers;
-    }
+	public List<Server> getServers() {
+		return servers;
+	}
 
-    public void setServers(List<Server> servers) {
-	this.servers = servers;
-    }
+	public void setServers(List<Server> servers) {
+		this.servers = servers;
+	}
 
 }

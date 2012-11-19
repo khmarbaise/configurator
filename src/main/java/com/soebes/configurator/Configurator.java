@@ -1,6 +1,5 @@
 package com.soebes.configurator;
 
-public class Configurator
-{
+public class Configurator {
 
 }
